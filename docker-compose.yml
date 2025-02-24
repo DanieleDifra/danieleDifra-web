@@ -1,7 +1,8 @@
 services:
   web:
-    image: danieledifra-web
-    build: .
+    image: nginx:latest
+    volumes: 
+      - .:/usr/share/nginx/html:ro
     ports:
       - "8080:80"
     restart: unless-stopped
